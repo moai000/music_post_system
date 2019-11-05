@@ -9,7 +9,6 @@ body {
     width: 100%;
     height: 23px;
     background-color: #00ccff;
-    margin-top: 40px;
 }
 
 .line2 {
@@ -35,6 +34,8 @@ h2 {
     font-size: 40px;
     margin-top: 15px;
     font-weight: bold;
+    color: #00ccff;
+    display: inline;
 }
 
 span {
@@ -46,23 +47,21 @@ button {
     font-size: 15px;
 }
 
-
-#header_title {
-    color: #00ccff;
-    font-size: 36px;
-    float: left;
-}
-
 #header_menu {
     color: #000;
-    padding: 20px 10px;
-    padding-right: 40px;
+    padding-top: 15px;
+    padding-right: 3%;
+    display: inline;
     float: right;
 }
 
 a {
     color: #330099;
+    text-decoration: none;
+}
 
+a:hover {
+    background-color: #a4c6ff;
 }
 
 li {
@@ -96,6 +95,13 @@ td {
     padding: 10px 2%;
 }
 
+#music_post {
+    border: solid  #330099;
+    display: inline;
+    padding: 5px 5px;
+    font-weight: bold;
+    text-align: center;
+}
 
 
 #footer {
@@ -140,30 +146,30 @@ select {
     height: 30px;
 }
 
-table#report_list th {
+table#music_list th {
     font-weight: bold;
     padding: 10px 2%;
 }
 
-table#report_list .report_name {
+table#music_list .user_name {
     width: 10%;
     padding: 10px 2%;
 }
-table#report_list .report_date {
+table#music_list .song {
     width: 20%;
 }
-table#report_list .time_in {
-    width: 10%;
+table#music_list .singer {
+    width: 20%;
 }
-table#report_list .time_out {
+table#music_list .genre {
     width: 10%;
 }
 
-table#report_list .report_title {
-    width: 27%;
+table#music_list .created_at {
+    width: 17%;
 }
 
-table#report_list .report_action {
+table#music_list .action {
     width: 13%;
 }
 pre {

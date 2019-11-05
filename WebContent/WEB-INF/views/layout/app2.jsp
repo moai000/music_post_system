@@ -9,16 +9,19 @@
         <link rel="stylesheet" href="<c:url value='/css/style.css' />">
     </head>
     <body>
-            <div id="wrapper">
-            <h2>　ららら　<span>音楽投稿サイト</span></h2>
+        <div id="wrapper">
+            <div id="header">
+                <h2>　ららら　<span>音楽投稿サイト</span></h2>
                 <div id="header_menu">
-                   <a href="<c:url value='/login' />">ログイン</a>&nbsp;&nbsp;&nbsp;
-                   <a href="<c:url value='users/new' />">会員登録</a>
+                    <c:if test="${sessionScope.login_user != null}">
+                        <a href="<c:url value='/user/account' />"><c:out value="${sessionScope.login_user.name}" />&nbsp;さん</a>&nbsp;&nbsp;&nbsp;
+                        <a href="<c:url value='/logout' />">ログアウト</a>
+                    </c:if>
                 </div>
+            </div>
             <div class="line1">
             </div>
             <div class="line2">
-            </div>
             </div>
             <div id="content">
                 ${param.content}
@@ -26,5 +29,6 @@
             <div id="footer">
                 by Eiichi Shimizu.
             </div>
+        </div>
     </body>
 </html>
